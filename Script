@@ -1,1 +1,10 @@
-
+let curtidas = 0; 
+function curtir() { 
+curtidas++; 
+document.getElementById("likes").innerText = 
+curtidas + (curtidas === 1 ? " curtida" : " curtidas"); 
+} function responder(resposta) { 
+const resultado = document.getElementById("resultado"); 
+if (resposta === 1910) { 
+resultado.innerText = "✅ Acertou! Vai, Corinthians!"; 
+} else { resultado.innerText = "❌ Errou! A resposta correta é 1910."; } }
