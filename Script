@@ -52,3 +52,12 @@ function novaCuriosidade() {
     document.getElementById("numero").textContent =
         contador;
 }
+const likeButton = document.getElementById("likeButton");
+const likeCount = document.getElementById("likeCount");
+
+let curtidas = 0;
+
+likeButton.addEventListener("click", function () {
+    curtidas++;
+    likeCount.textContent = curtidas;
+});
