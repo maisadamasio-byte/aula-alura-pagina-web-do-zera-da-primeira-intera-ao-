@@ -1,10 +1,54 @@
-let curtidas = 0; 
-function curtir() { 
-curtidas++; 
-document.getElementById("likes").innerText = 
-curtidas + (curtidas === 1 ? " curtida" : " curtidas"); 
-} function responder(resposta) { 
-const resultado = document.getElementById("resultado"); 
-if (resposta === 1910) { 
-resultado.innerText = "✅ Acertou! Vai, Corinthians!"; 
-} else { resultado.innerText = "❌ Errou! A resposta correta é 1910."; } }
+ const curiosidades = [
+    {
+        titulo: "Fundação do Corinthians",
+        texto: "O Corinthians foi fundado em 1º de setembro de 1910, no bairro do Bom Retiro, em São Paulo, por um grupo de trabalhadores."
+    },
+    {
+        titulo: "Por que Corinthians?",
+        texto: "O nome do clube foi inspirado no Corinthian Football Club, da Inglaterra, que havia excursionado pelo Brasil."
+    },
+    {
+        titulo: "As primeiras cores",
+        texto: "As primeiras camisas do Corinthians eram de cor creme. Com o tempo, o branco passou a ser a principal cor do uniforme."
+    },
+    {
+        titulo: "O primeiro gol",
+        texto: "O primeiro gol da história do Corinthians foi marcado por Luigi Salvatore Fabbi, em setembro de 1910."
+    },
+    {
+        titulo: "Time do Povo",
+        texto: "O Corinthians ficou conhecido como 'Time do Povo' por sua origem ligada a trabalhadores e pela forte identificação popular."
+    },
+    {
+        titulo: "Democracia Corintiana",
+        texto: "Entre 1981 e 1984, o Corinthians viveu a chamada Democracia Corintiana, movimento que ficou marcado pela participação dos jogadores nas decisões do clube."
+    },
+    {
+        titulo: "Primeiro título",
+        texto: "O primeiro título do Corinthians foi conquistado no pedestrianismo, ainda em 1910."
+    },
+    {
+        titulo: "O Timão",
+        texto: "O apelido 'Timão' está associado à ideia de força e grandeza, tornando-se uma das formas mais tradicionais de chamar o Corinthians."
+    }
+];
+
+let contador = 0;
+
+function novaCuriosidade() {
+
+    const indice = Math.floor(Math.random() * curiosidades.length);
+
+    const curiosidade = curiosidades[indice];
+
+    document.getElementById("titulo").textContent =
+        curiosidade.titulo;
+
+    document.getElementById("curiosidade").textContent =
+        curiosidade.texto;
+
+    contador++;
+
+    document.getElementById("numero").textContent =
+        contador;
+}
